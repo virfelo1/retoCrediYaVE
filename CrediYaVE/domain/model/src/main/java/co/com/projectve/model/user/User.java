@@ -11,6 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 // Aqui va toda la logica del negocio
+// prueba de gitflow
 public class User {
     
 }
