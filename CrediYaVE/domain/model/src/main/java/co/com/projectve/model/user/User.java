@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class User {
