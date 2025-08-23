@@ -12,6 +12,7 @@ import lombok.Setter;
 @Builder(toBuilder = true)
 // Aqui va toda la logica del negocio
 // prueba de gitflow
+// se agrega la version release v1.0.0
 public class User {
     
 }
