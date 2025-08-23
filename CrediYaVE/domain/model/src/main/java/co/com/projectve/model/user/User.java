@@ -10,5 +10,7 @@ import lombok.Setter;
 //@NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
+// Aqui va toda la logica del negocio
 public class User {
+    
 }
