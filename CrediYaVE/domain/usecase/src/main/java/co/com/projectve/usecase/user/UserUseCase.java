@@ -14,17 +14,17 @@ public class UserUseCase {
 
     private static final Pattern EMAIL_PATTERN = Pattern.compile("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
 
-    private final UserRepository repository;
+    private final UserRepository userRepository;
 
     BigDecimal minSalary = BigDecimal.ZERO;
     BigDecimal maxSalary = new BigDecimal("15000000");
 
     public Mono<User> execute(User user){
         return validate(user)
-                .flatMap(u -> repository.emailExist(u.getEmail())
+                .flatMap(u -> userRepository.emailExist(u.getEmail())
                         .flatMap(exist ->{
                             if (exist) return Mono.error(new IllegalArgumentException("Correo ya registrado"));
-                            return repository.save(u);
+                            return userRepository.save(u);
                                 }));
     }
 
